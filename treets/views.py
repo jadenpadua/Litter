@@ -8,6 +8,17 @@ from .models import Treet
 def home_view(request, *args, **kwargs):
     return render(request, "pages/home.html", context={}, status=200)
 
+def treet_list_view(request, *args, **kwargs):
+    queryset = Treet.objects.all()
+    tweets_list = [{"id": treet.id, "content": treet.content} for treet in queryset]
+
+    data = {
+        "response": tweets_list
+    }
+
+    return JsonResponse(data)
+
+
 def treet_detail_view(request, treet_id,  *args, **kwargs):
 
     data = {

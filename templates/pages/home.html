@@ -1,1 +1,32 @@
-<h1> Welcome to Litter! </h1>
+{% extends 'base.html' %}
+
+{%block content %}
+Welcome to Litter!
+
+
+<div id='treets'>
+    Treets loaded here
+</div>
+
+<script>
+
+const treetsElement = document.getElementById("treets")
+const xhr = new XMLHttpRequest()
+const method = 'GET'
+const url = "/treets"
+const responseType = "json"
+
+xhr.responseType = responseType
+
+xhr.open(method, url)
+xhr.onload = () => {
+    const responseObj = xhr.response
+    const data = responseObj.response
+
+    console.log(data)
+}
+xhr.send()
+
+</script>
+
+{%endblock content %}
