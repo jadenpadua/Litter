@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="container">
       <div className="box">
         <div className="mini-box">
-        <FontAwesomeIcon icon={faCat} style={{marginTop: 6, height: 20, width: 20}}/>
+        <FontAwesomeIcon icon={faCat} className="icon"/>
         </div>
 
 

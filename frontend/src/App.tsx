@@ -37,7 +37,6 @@ const App = () => {
 
       <div className="container2">
       {/* <img src={stars2} style={{height: 250, width: 350}}/> */}
-      <div className = "Hello"></div>
         <form className="input-form">
           <label>
             <input className="input-text" type="text" name="name" placeholder="YOUR EMAIL" />
