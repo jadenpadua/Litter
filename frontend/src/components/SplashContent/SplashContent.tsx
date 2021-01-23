@@ -1,10 +1,10 @@
 import cat3 from "../../assets/cat_3.png";
-import './index.css'
+import './styles.css'
 
 const SplashContent = () => {
   return (
     <>
-      <img src={cat3} style={{ height: 200, width: 200 }} alt="cat" />
+      <img className="cat-image" src={cat3} style={{ height: 200, width: 200 }} alt="cat" />
       <div className="container1">
         <h1>COMING SOON</h1>
         <h3>ARE YOU READY?</h3>

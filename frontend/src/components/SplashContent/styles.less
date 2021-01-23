@@ -1,0 +1,96 @@
+.cat-image {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+@container1-margin-top: 3%;
+@container1-h1-font-size: 3.1em;
+@container1-h1-letter-spacing: 0.4em;
+@container1-h3-font-size: 1.25em;
+@container1-h3-letter-spacing: 0.5em;
+@container1-h3-font-weight: 200;
+
+  .container1 {
+    margin-top: @container1-margin-top;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .container1 h1 {
+    font-size: @container1-h1-font-size;
+    letter-spacing: @container1-h1-letter-spacing;
+    color: #3377FF;
+    font-family: 'Oxygen', sans-serif;
+  }
+  .container1 h3 {
+    font-size: @container1-h3-font-size;
+    letter-spacing: @container1-h3-letter-spacing;
+    color: #3377FF;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: @container1-h3-font-weight;
+  }
+
+@container2-margin-top: 5%;
+
+  .container2 {
+    margin-top: @container2-margin-top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+@input-button-height: 5vh;
+@input-button-letter-spacing: 0.2em;
+@input-button-border-top: 2px solid #3377FF;
+@input-button-border-else: 1px solid #3377FF;
+  
+  .input-button {
+    text-decoration: none;
+    background-color: #3377FF;
+    color: white;
+    height: @input-button-height;
+    letter-spacing: @input-button-letter-spacing;
+    outline: none;
+    border-top: @input-button-border-top;
+    border-left: @input-button-border-else;
+    border-bottom: @input-button-border-else;
+    border-right: @input-button-border-else;
+  }
+
+@input-text-border: 2px solid #3377FF;
+@input-text-font-weight: 300;
+@input-text-font-size: 15px;
+@input-text-height: 4.1vh;
+@input-text-width: 20vw;
+
+  .input-text {
+    border: @input-text-border;
+    color: black;
+    font-weight: @input-text-font-weight;
+    font-size: @input-text-font-size;
+    height: @input-text-height;
+    width: @input-text-width;
+  }
+
+@placeholder-font-weight: 400;
+@placeholder-font-size: 15px;
+@placeholder-opacity: 40%;
+@placeholder-letter-spacing: 40%;
+@placeholder-padding: 10px;
+@placeholder-margin-top: 100px;
+
+  ::placeholder {
+    color: #3377FF;
+    font-weight: @placeholder-font-weight;
+    font-size: @placeholder-font-size;
+    opacity: @placeholder-opacity;
+    letter-spacing: @placeholder-letter-spacing;
+    padding: @placeholder-padding;
+    margin-top: @placeholder-margin-top;
+  }

@@ -20,35 +20,30 @@
   font-family: 'Oxygen', sans-serif;
 }
 .container1 h3 {
-  margin-top: 0px;;
-  font-size: 20px;
-  letter-spacing: 10px;
+  font-size: 1.25em;
+  letter-spacing: 0.5em;
   color: #3377FF;
   font-family: 'Oxygen', sans-serif;
   font-weight: 200;
 }
-
 .container2 {
   margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .input-button {
   text-decoration: none;
   background-color: #3377FF;
   color: white;
-  height: 5.0vh;
+  height: 5vh;
   letter-spacing: 0.2em;
   outline: none;
-  border: 2px solid ;
   border-top: 2px solid #3377FF;
   border-left: 1px solid #3377FF;
   border-bottom: 1px solid #3377FF;
   border-right: 1px solid #3377FF;
 }
-
 .input-text {
   border: 2px solid #3377FF;
   color: black;
@@ -57,13 +52,12 @@
   height: 4.1vh;
   width: 20vw;
 }
-
 ::placeholder {
   color: #3377FF;
   font-weight: 400;
   font-size: 15px;
   opacity: 40%;
-  letter-spacing: 2px;
+  letter-spacing: 40%;
   padding: 10px;
   margin-top: 100px;
 }
