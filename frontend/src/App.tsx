@@ -1,12 +1,12 @@
 import * as React from "react";
 import "./App.css";
-import { useEffect} from "react";
+import {useEffect} from "react";
 import axios from "axios";
 
 import Navbar from "./components/Navbar/Navbar";
 import SplashContent from "./components/SplashContent/SplashContent"
 
-const App = () => {
+const App: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
