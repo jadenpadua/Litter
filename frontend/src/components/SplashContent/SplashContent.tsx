@@ -3,28 +3,32 @@ import cat3 from "../../assets/cat_3.png";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCat } from "@fortawesome/free-solid-svg-icons";
-
 const SplashContent: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isAlert, setIsAlert] = useState(false);
 
   const onChange = (e: React.FormEvent<HTMLInputElement>): void => {
     setEmail(e.currentTarget.value);
   };
 
   const validate = (email: string): boolean => {
-    // TODO: Email validation
-    return true;
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
 
   const onSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
     if (validate(email)) {
-      console.log(email);
+      console.log("Email of: ", email, "validated");
+
+      //TODO: Send POST request to database
+
       setEmail("");
       setIsSubmitted(true);
+      setIsAlert(false);
     } else {
-      console.log("Validation is false, send alert prompt...");
+      setIsAlert(true);
     }
   };
 
@@ -43,7 +47,7 @@ const SplashContent: React.FC = () => {
 
       {isSubmitted ? (
         <div className="thank-you">
-          Success! thank you for believing in Litter{" "}
+          Success! Thank you for believing in Litter{" "}
           <FontAwesomeIcon icon={faCat} className="icon" />
         </div>
       ) : (
@@ -67,6 +71,11 @@ const SplashContent: React.FC = () => {
           </form>
         </div>
       )}
+      {isAlert ? (
+        <div className="alert">
+          <h4>Please enter a valid email</h4>
+        </div>
+      ) : null}
     </>
   );
 };
