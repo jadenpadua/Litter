@@ -3,6 +3,7 @@ import cat3 from "../../assets/cat_3.png";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCat } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 const SplashContent: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,12 +18,25 @@ const SplashContent: React.FC = () => {
     return re.test(email);
   };
 
+  const sendEmail = async (email: string): Promise<any> => {
+    try {
+      let resp = await axios.post("http://127.0.0.1:8000/sendemail", {
+        email: email,
+      });
+      return resp;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const onSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
     if (validate(email)) {
       console.log("Email of: ", email, "validated");
 
-      //TODO: Send POST request to database
+      sendEmail(email).then((res) => {
+        console.log("This should be a confirmation message it was successfull");
+      });
 
       setEmail("");
       setIsSubmitted(true);

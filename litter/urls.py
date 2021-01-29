@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from treets.views import home_view, treet_detail_view, treet_list_view
+from treets.views import home_view, treet_detail_view, treet_list_view, send_email_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
     path('treets', treet_list_view),
     path('treets/<int:treet_id>', treet_detail_view),
+    path('sendemail', send_email_view),
 
 ]
