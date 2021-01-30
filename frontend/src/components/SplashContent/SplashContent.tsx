@@ -20,7 +20,7 @@ const SplashContent: React.FC = () => {
 
   const sendEmail = async (email: string): Promise<any> => {
     try {
-      let resp = await axios.post("http://127.0.0.1:8000/sendemail", {
+      let resp = await axios.post("http://127.0.0.1:8000/api/post-email/", {
         email: email,
       });
       return resp;

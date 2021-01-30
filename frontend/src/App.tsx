@@ -11,7 +11,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let resp = await axios.get("http://127.0.0.1:8000/treets");
+        let resp = await axios.get("http://127.0.0.1:8000/api/treets/");
         console.log(resp.data);
       } catch (e) {
         console.log(e);
